@@ -1,3 +1,27 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "react-app", "prettier/prettier"],
+  "plugins": ["react-hooks", "simple-import-sort", "prettier"],
+  "rules": {
+    "prettier/prettier": "warn",
+    "react-hooks/rules-of-hooks": "warn",
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
+    "no-multiple-empty-lines": ["warn", { "max": 1, "maxEOF": 0 }],
+    "comma-dangle": ["warn", "always-multiline"],
+    "object-curly-spacing": ["warn", "always"],
+    "space-in-parens": ["warn", "never"],
+    "computed-property-spacing": ["warn", "never"],
+    "comma-spacing": ["warn", { "before": false, "after": true }],
+    "eol-last": ["warn", "always"],
+    "quotes": ["warn", "single"],
+    "no-tabs": "warn",
+    "semi": ["warn", "always"],
+    "import/no-anonymous-default-export": 0,
+    "object-shorthand": "warn",
+    "padding-line-between-statements": [
+      "warn",
+      { "blankLine": "always", "prev": "*", "next": "return" }
+    ],
+    "@typescript-eslint/no-redeclare": 0
+  }
 }
