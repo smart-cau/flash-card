@@ -17,6 +17,7 @@
     "no-tabs": "warn",
     "semi": ["warn", "always"],
     "import/no-anonymous-default-export": 0,
+    "jsx-a11y/anchor-is-valid": 0,
     "object-shorthand": "warn",
     "padding-line-between-statements": [
       "warn",

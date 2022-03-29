@@ -1,13 +1,17 @@
-import { HOME } from 'constants/navigationData';
+import { navigations } from 'constants/navigationData';
+import { useRouter } from 'next/router';
 import { useCallback, useState } from 'react';
 
 function useNavigation() {
-  const [route, setRoute] = useState(HOME);
+  const router = useRouter();
+  const [route, setRoute] = useState(
+    navigations.filter((item) => item.link === router.pathname)[0].name,
+  );
 
   const selectAction = useCallback(
-    (option: string) => {
-      if (route === option) return;
-      setRoute(option);
+    (routeName: string) => {
+      if (router.pathname === routeName) return;
+      setRoute(routeName);
     },
     [route],
   );
